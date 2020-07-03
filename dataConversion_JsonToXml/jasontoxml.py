@@ -2,7 +2,7 @@ import json
 
 ##loading the input file
 
-with open("json_to_xml1.json") as json_file:
+with open("inputFiles\JsonInput.json") as json_file:
     data = json.load(json_file)
     
 ##importing and renaming the library
@@ -25,8 +25,8 @@ for room in data["rooms"]:
         ET.SubElement(rateplans, "ToDate").text = data["endDate"]
         ET.SubElement(rateplans, "Taxinclusive").text = str(data["taxInclusive"])
         rate = ET.SubElement(rateplans,"RoomRate")
-        ET.SubElement(rate, "Base").text = rateplan["rate"]["rackRate"]
+#       ET.SubElement(rate, "Base").text = str(rateplan["rate"]["rackRate"])
         
 ##exporting the data to xml file   
 xmltree = ET.ElementTree(root)
-xmltree.write("xmlform.xml")
+xmltree.write("outputFiles\XmlOutput.xml")
