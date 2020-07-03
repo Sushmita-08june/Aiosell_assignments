@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="pagestyle.css">
+
+    </head>
+    <body>
+        <div class="sidenav">
+            <img src="https://startuptalky.com/content/images/2020/05/Startuptalky-aiosell.jpg" alt="logo" width="180" height="80">
+            <ul>
+                <li>
+            <a href="#about">Rates & Inventory</a>
+            <ul>
+                <li><a href="#services">live bookings</a></li>
+            </ul>
+            </li>
+
+            </ul>
+        </div>
+        <script src="bookingdata.js"></script>
+
+        <div class="main" style="overflow-x:auto;">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Rates & Inventory</a>
+            <p id = "rate" class="navbar-text navbar-right">Rates & Inventory > Live Bookings</p>
+        </nav>
+        <div class="jumbotron">
+
+
+        <form id="datadisp">
+            <div class="form-row">
+               <div class="form-group col-md-4 mb-3">
+                 <label for="fromDate"><strong>From Date:</strong></label>
+                 <input type="date" class="form-control" id="fromDate" name="From" value="">
+               </div>
+               <div class="form-group col-md-4 mb-3">
+                 <label for="toDate"><strong>To Date:</strong></label>
+                 <input type="date" class="form-control" id="toDate" name="To" value="" onchange="display()">
+               </div>
+             </div>
+        </form>
+        <div class="table-responsive">
+
+        <table class="table" id="jasonDisplay" border = 1px solid black>
+            <thead class="thead-dark">
+                <th>Channel</th>
+                <th>Bookinf Id</th>
+                <th>Customer name</th>
+                <th>Booked on</th>
+                <th>Check In</th>
+                <th>Check out</th>
+                <th>Room</th>
+                <th>Room Nights</th>
+                <th># of Rooms</th>
+                <th>Price</th>
+            </thead>
+
+        </table>
+        </div>
+
+        <div class ="page_info float-right">
+
+
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <span class="page-link">Previous</span>
+                    </li>
+                    <li class="page-item active">
+                        <span class="page-link">
+                            1
+                            <span class="sr-only">(current)</span>
+                        </span>
+                    </li>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+
+    </body>
+</html>
